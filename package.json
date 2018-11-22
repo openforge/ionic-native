@@ -39,7 +39,7 @@
     "semver": "^5.6.0",
     "tslint": "^5.11.0",
     "tslint-ionic-rules": "0.0.19",
-    "typescript": "~2.4.2",
+    "typescript": "~2.8",
     "zone.js": "^0.8.26"
   },
   "scripts": {
