@@ -1,14 +1,3 @@
-/**
- * This is a template for new plugin wrappers
- *
- * TODO:
- * - Add/Change information below
- * - Document usage (importing, executing main functionality)
- * - Remove any imports that you are not using
- * - Remove all the comments included in this template, EXCEPT the @Plugin wrapper docs and any other docs you added
- * - Remove this note
- *
- */
 import { Injectable } from '@angular/core';
 import { Cordova, IonicNativePlugin, Plugin } from '@ionic-native/core';
 
@@ -27,11 +16,6 @@ import { Cordova, IonicNativePlugin, Plugin } from '@ionic-native/core';
  * ...
  *
  *
- * this.twilioVoice.functionName('Hello', 123)
- *   .then((res: any) => console.log(res))
- *   .catch((error: any) => console.error(error));
- *
- * ```
  */
 @Plugin({
   pluginName: 'TwilioVoice',
@@ -45,35 +29,81 @@ import { Cordova, IonicNativePlugin, Plugin } from '@ionic-native/core';
 @Injectable()
 export class TwilioVoice extends IonicNativePlugin {
 
-  /**
-   * This function does something
-   * @param arg1 {string} Some param to configure something
-   * @param arg2 {number} Another param to configure something
-   * @return {Promise<any>} Returns a promise that resolves when something happens
-   */
-  /*@Cordova()
-  TwilioVoiceClient(): TwilioObject {
+  @Cordova()
+  call(token: any, params:any): void {
     return; // We add return; here to avoid any IDE / Compiler errors
-  }*/
+  }
+
+  @Cordova()
+  sendDigits(digits: any): void {
+    return; // We add return; here to avoid any IDE / Compiler errors
+  }
+
+  @Cordova()
+  disconnect(): void {
+    return; // We add return; here to avoid any IDE / Compiler errors
+  }
+
+  @Cordova()
+  rejectCallInvite(): void {
+    return; // We add return; here to avoid any IDE / Compiler errors
+  }
+
+  @Cordova()
+  acceptCallInvite(): void {
+    return; // We add return; here to avoid any IDE / Compiler errors
+  }
+
+  @Cordova()
+  setSpeaker(mode:any): void {
+    return; // We add return; here to avoid any IDE / Compiler errors
+  }
+
+  @Cordova()
+  unmuteCall(): void {
+    return; // We add return; here to avoid any IDE / Compiler errors
+  }
+
+  @Cordova()
+  isCallMuted(fn:any): void {
+    return; // We add return; here to avoid any IDE / Compiler errors
+  }
 
   @Cordova()
   initialize(token: any): void {
     return; // We add return; here to avoid any IDE / Compiler errors
   }
 
-}
-
-/**
- * @hidden
- */
-/*@Plugin({
-  pluginName: 'TwilioVoice',
-  plugin: 'cordova-plugin-twiliovoicesdk',
-  pluginRef: 'Twilio'
-})
-export class TwilioObject {
   @Cordova()
-  initialize(token: any): TwilioObject {
+  error(fn: any): void {
     return; // We add return; here to avoid any IDE / Compiler errors
   }
-}*/
+
+  @Cordova()
+  clientinitialized(fn: any): void {
+    return; // We add return; here to avoid any IDE / Compiler errors
+  }
+
+  @Cordova()
+  callinvitereceived(fn: any): void {
+    return; // We add return; here to avoid any IDE / Compiler errors
+  }
+
+
+  @Cordova()
+  callinvitecanceled(fn: any): void {
+    return; // We add return; here to avoid any IDE / Compiler errors
+  }
+
+  @Cordova()
+  calldidconnect(fn: any): void {
+    return; // We add return; here to avoid any IDE / Compiler errors
+  }
+
+  @Cordova()
+  calldiddisconnect(fn: any): void {
+    return; // We add return; here to avoid any IDE / Compiler errors
+  }
+
+}
+
