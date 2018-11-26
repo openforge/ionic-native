@@ -36,8 +36,8 @@ import { Cordova, IonicNativePlugin, Plugin } from '@ionic-native/core';
 @Plugin({
   pluginName: 'TwilioVoice',
   plugin: 'cordova-plugin-twiliovoicesdk', // npm package name, example: cordova-plugin-camera
-  pluginRef: 'Twilio', // the variable reference to call the plugin, example: navigator.geolocation
-  repo: 'https://github.com/jefflinwood/cordova-plugin-twiliovoicesdk', // the github repository URL for the plugin
+  pluginRef: 'Twilio.TwilioVoiceClient', // the variable reference to call the plugin, example: navigator.geolocation
+  repo: 'https://github.com/openforge/cordova-plugin-twiliovoicesdk.git#load-as-js-module', // the github repository URL for the plugin
   install: '', // OPTIONAL install command, in case the plugin requires variables
   installVariables: [], // OPTIONAL the plugin requires variables
   platforms: ['Android', 'iOS'] // Array of platforms supported, example: ['Android', 'iOS']
@@ -51,8 +51,13 @@ export class TwilioVoice extends IonicNativePlugin {
    * @param arg2 {number} Another param to configure something
    * @return {Promise<any>} Returns a promise that resolves when something happens
    */
-  @Cordova()
+  /*@Cordova()
   TwilioVoiceClient(): TwilioObject {
+    return; // We add return; here to avoid any IDE / Compiler errors
+  }*/
+
+  @Cordova()
+  initialize(token: any): void {
     return; // We add return; here to avoid any IDE / Compiler errors
   }
 
@@ -61,7 +66,7 @@ export class TwilioVoice extends IonicNativePlugin {
 /**
  * @hidden
  */
-@Plugin({
+/*@Plugin({
   pluginName: 'TwilioVoice',
   plugin: 'cordova-plugin-twiliovoicesdk',
   pluginRef: 'Twilio'
@@ -71,4 +76,4 @@ export class TwilioObject {
   initialize(token: any): TwilioObject {
     return; // We add return; here to avoid any IDE / Compiler errors
   }
-}
+}*/
