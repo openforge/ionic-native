@@ -60,6 +60,11 @@ export class TwilioVoice extends IonicNativePlugin {
   }
 
   @Cordova()
+  muteCall(): void {
+    return; // We add return; here to avoid any IDE / Compiler errors
+  }
+
+  @Cordova()
   unmuteCall(): void {
     return; // We add return; here to avoid any IDE / Compiler errors
   }
@@ -88,7 +93,6 @@ export class TwilioVoice extends IonicNativePlugin {
   callinvitereceived(fn: any): void {
     return; // We add return; here to avoid any IDE / Compiler errors
   }
-
 
   @Cordova()
   callinvitecanceled(fn: any): void {
