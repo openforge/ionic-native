@@ -21,7 +21,7 @@ import { Cordova, IonicNativePlugin, Plugin } from '@ionic-native/core';
   pluginName: 'TwilioVoice',
   plugin: 'cordova-plugin-twiliovoicesdk', // npm package name, example: cordova-plugin-camera
   pluginRef: 'Twilio.TwilioVoiceClient', // the variable reference to call the plugin, example: navigator.geolocation
-  repo: 'https://github.com/openforge/cordova-plugin-twiliovoicesdk.git#load-as-js-module', // the github repository URL for the plugin
+  repo: 'https://github.com/openforge/cordova-plugin-twiliovoicesdk.git', // the github repository URL for the plugin
   install: '', // OPTIONAL install command, in case the plugin requires variables
   installVariables: [], // OPTIONAL the plugin requires variables
   platforms: ['Android', 'iOS'] // Array of platforms supported, example: ['Android', 'iOS']
